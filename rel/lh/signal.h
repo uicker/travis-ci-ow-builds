@@ -72,7 +72,7 @@ typedef struct siginfo siginfo_t;
 
 #endif /* extensions enabled */
 
-#define _SIGMIN     1
+#define _SIGMIN  1
 
 _WCRTLINK extern int  raise( int __sig );
 _WCRTLINK extern void (*signal( int __sig, void (*__func)(int) ) )(int);

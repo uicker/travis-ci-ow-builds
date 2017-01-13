@@ -67,7 +67,7 @@ typedef struct siginfo siginfo_t;
 
 #endif /* extensions enabled */
 
-#define _SIGMIN     1
+#define _SIGMIN  1
 
 namespace std {
 _WCRTLINK extern int  raise( int __sig );
