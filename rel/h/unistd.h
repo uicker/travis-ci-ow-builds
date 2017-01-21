@@ -52,6 +52,12 @@ _WCRTLINK extern char   *getcwd( char *__buf, size_t __size );
 _WCRTLINK extern char   *_getcwd( char *__buf, size_t __size );
 _WCRTLINK extern int    getopt( int __argc, char * const __argv[], const char *__optstring );
 _WCRTLINK extern int    getpid( void );
+
+#if defined(__RDOS__)
+typedef int             pid_t;  /* Used for process IDs & group IDs */
+_WCRTLINK extern pid_t  fork( void );
+#endif
+
 _WCRTLINK extern int    rmdir( const char *__path );
 _WCRTLINK extern unsigned int sleep( unsigned int __seconds );
 _WCRTLINK extern int    usleep( unsigned long __usec );
